@@ -3,10 +3,20 @@
 {% block title %}Lucky{% endblock %}
 
 {% block body %}
-    <h1>Crazy Lucky Page!</h1>
-    <p>Today's lucky number is: {{ number }}</p>
-
-    <div class="images">
-        <img src="{{ asset('img/' ~ randomImage) }}" alt="Random Image">
+<div class="content">
+    <div class="row">
+        <h1>Random!</h1>
     </div>
+    <div class="row">
+        <div class="column">
+            <h2>En random bild från Madeira:</h2>
+
+            <div class="images">
+                <img src="{{ asset('img/' ~ randomImage) }}" alt="Random Image">
+            </div>
+            <br></br>
+            <p>Dagens slumpade tal: {{ number }}</p>
+        </div>
+    </div>
+</div>
 {% endblock %}
