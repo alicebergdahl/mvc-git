@@ -21,8 +21,11 @@
                     <li><a href="{{ path('about') }}">Om</a></li>
                     <li><a href="{{ path('report') }}">Redovisning</a></li>
                     <li><a href="{{ path('lucky') }}">Random</a></li>
+                    <li><a href="{{ path('card') }}">Kortspel</a></li>
             </nav>
         </header>
+            {# Include flash messages template #}
+            {% include 'flash.html.twig' %}
         {% block body %}{% endblock %}
     </body>
 </html>

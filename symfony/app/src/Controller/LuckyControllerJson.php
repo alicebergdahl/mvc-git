@@ -10,11 +10,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LuckyControllerJson extends AbstractController
 {
-    #[Route("/api/", name: "api_landing_page")]
+    #[Route("/api", name: "api_landing_page")]
     public function landingPage(): Response
     {
         $routes = [
             'quote' => '/api/quote',
+            'deck' => '/api/deck',
         ];
 
         return $this->render('landing_page.html.twig', [
