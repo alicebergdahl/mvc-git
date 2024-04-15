@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Pig Game{% endblock %}
+
+{% block main %}
+    <h1>Session Debug</h1>
+    <pre>
+        {{ session|json_encode(constant('JSON_PRETTY_PRINT')) }}
+    </pre>
+
+{% endblock %}

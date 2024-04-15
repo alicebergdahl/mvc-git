@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sorterad kortlek{% endblock %}
+
+{% block main %}
+    <h1>Sorterad kortlek</h1>
+    <table border="1">
+        {% for card in deck.getCards() %}
+            <tr>
+                <td>{{ card.getSuit() }}  {{ card.getValue() }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
